@@ -1,8 +1,8 @@
 import Icone from './Icone.jsx'
 
-function Navbar() {
+function Navbar({ cor, navbarBaixo }) {
     return (
-        <header className="bg-white py-1">
+        <header className={`py-1 ${navbarBaixo ? 'fixed bottom-0 w-full' : ''}`} style={{backgroundColor: cor}}>
             <nav className="flex justify-between items-center w-[95%] mx-auto">
                 <div className='flex justify-between items-center w-full md:w-auto'>
                     <button className='md:hidden'>
@@ -14,7 +14,7 @@ function Navbar() {
                     </button>
                 </div>
                 <div className='hidden md:flex md:items-center md:gap-[4vw]'>
-                    <ul className='flex md:flex-row flex-col items-center gap-[4vw]'>
+                    <ul className='flex md:flex-row flex-col items-center gap-[3vw]'>
                         <li>
                             <button className='align-middle'>
                                 <Icone icone="carrinho" />
