@@ -3,9 +3,13 @@ import cacto from './assets/cacto.webp';
 import './styles/Card.css';
 
 function Card() {
+
+    // largura = 13
+    // altura = 1.5 * largura
+
     return (
-        <div className='flex items-center justify-center min-h-screen'>
-            <div className='card bg-white md:w-[13em] md:h-[19.5em] w-[10em] h-[15em] rounded-lg drop-shadow-lg hover:drop-shadow-xl border-2 '>
+        <div className='flex justify-center'>
+            <div className='card bg-white aspect-[3/2] md:w-[13em] md:h-[19.5em] w-[10em] h-[15em] rounded-lg drop-shadow-lg hover:drop-shadow-xl border-2 '>
                 <div className='bg-white rounded-t-lg'>
                     <img src={cacto} alt="Cacto" className='w-full h-2/3 object-cover' />
                 </div>

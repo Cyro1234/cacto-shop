@@ -1,0 +1,9 @@
+.conteudo {
+    position: relative;
+    z-index: 4; /* Ajuste o valor conforme necessário */
+    
+}
+
+.cards {
+    gap: 50px;
+}

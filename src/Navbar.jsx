@@ -1,8 +1,9 @@
 import Icone from './Icone.jsx'
+import Pesquisa from './Pesquisa.jsx'
 
 function Navbar({ cor, navbarBaixo }) {
     return (
-        <header className={`py-1 ${navbarBaixo ? 'fixed bottom-0 w-full' : ''}`} style={{backgroundColor: cor}}>
+        <header className={`py-1 ${navbarBaixo ? 'fixed bottom-0 w-full' : ''}`} style={{ backgroundColor: cor }}>
             <nav className="flex justify-between items-center w-[95%] mx-auto">
                 <div className='flex justify-between items-center w-full md:w-auto'>
                     <button className='md:hidden'>
@@ -12,6 +13,9 @@ function Navbar({ cor, navbarBaixo }) {
                     <button className='md:hidden'>
                         <Icone icone="carrinho" />
                     </button>
+                </div>
+                <div style={{ width: '100%'}}>
+                    <Pesquisa></Pesquisa>
                 </div>
                 <div className='hidden md:flex md:items-center md:gap-[4vw]'>
                     <ul className='flex md:flex-row flex-col items-center gap-[3vw]'>

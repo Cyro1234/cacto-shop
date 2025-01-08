@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
-import './styles/Gradiente.css'
+import Gradiente from './Gradiente.jsx';
 
 function Carousel({ children: slides }) {
     const [indice, setIndice] = useState(0);
@@ -14,8 +14,8 @@ function Carousel({ children: slides }) {
     const configBotao = { className: 'p-1 rounded-full shadow bg-white/90 hover:bg-white' };
 
     return (
-        <div className="overflow-hidden relative w-full hidden sm:block">
-            <div className="flex transition-transform ease-out duration-500" style={{ transform: `translateX(-${indice * 100/slides.length}%)`, width: `${slides.length * 100}%` }}>
+        <div className="overflow-hidden relative w-full h-[500px] max-lg:h-[400px] max-sm:h-[300px] max-[550px]:h-[200px]">
+            <div className="flex transition-transform ease-out duration-500 w-full h-full" style={{ transform: `translateX(-${indice * 100/slides.length}%)`, width: `${slides.length * 100}%` }}>
                 {slides.map((slide, index) => (
                     <div key={index} className="flex-shrink-0 w-full" style={tamanhoImagem}>
                         <img src={slide.props.src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover object-center"/>
@@ -30,7 +30,7 @@ function Carousel({ children: slides }) {
                     <ChevronRight size={tamanhoBotao} />
                 </button>
             </div>
-            <div className='gradiente'></div>
+            <Gradiente cor=""></Gradiente>
         </div>
     );
 }
