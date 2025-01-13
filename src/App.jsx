@@ -20,8 +20,10 @@ function App() {
 
   return (
     <div>
-      <Navbar cor={CoresCustomizadas.verde()}></Navbar>
-      {/* <Navbar direcao="baixo" cor=""></Navbar> */}
+      <Navbar cor={CoresCustomizadas.verde()} searchMD='false'></Navbar>
+      <div className="md:hidden">
+        <Navbar cor={CoresCustomizadas.verde()} logo="false" icon="false" searchMD="true"></Navbar>
+      </div>
       <div className='w-lg'>
         <Carousel>
           {slides.map((s, index) => (
